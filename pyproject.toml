@@ -1,0 +1,27 @@
+[project]
+name = "langchain-introduction"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "beautifulsoup4>=4.14.3",
+    "langchain>=1.2.17",
+    "langchain-google-genai>=4.2.2",
+    "langchain-openai>=1.2.1",
+    "pypdf>=6.10.2",
+    "python-dotenv>=1.2.2",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.20.2",
+]
+
+[tool.mypy]
+python_version = "3.14"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+ignore_missing_imports = false
+plugins = ["pydantic.mypy"]
